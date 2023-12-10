@@ -31,8 +31,9 @@ namespace DesignPatterns
             burgerPipline.AddStep(burgerService.AddBuns)
                          .AddStep(burgerService.AddCheese)
                          .AddStep(burgerService.AddPatty)
-                         .AddStep(burgerService.AddPickles);
-            Burger burger = burgerPipline.Execute(new Burger(),2);
+                         .AddStep(burgerService.AddPickles)
+                         .AddStep(burgerService.AddCheese);
+            Burger burger = burgerPipline.Execute(new Burger());
             burger.ShowBurger();
             #endregion
         }

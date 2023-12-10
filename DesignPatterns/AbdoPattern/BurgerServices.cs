@@ -1,54 +1,46 @@
-﻿using DesignPatterns.BuilderPattern;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DesignPatterns.AbdoPattern
+﻿namespace DesignPatterns.AbdoPattern
 {
     public class BurgerServices : IBurgerService
     {
-        public Burger AddBuns(Burger burger,int buns)
+        public Burger AddBuns(Burger burger)
         {
-            burger.Buns += buns;
+            burger.Buns++;
             return burger;
         }
 
-        public Burger AddTomatoes(Burger burger, int tomatoes)
+        public Burger AddTomatoes(Burger burger)
         {
-            burger.Tomatoes += tomatoes;
+            burger.Tomatoes++;
             return burger;
         }
 
-        public Burger AddPickles(Burger burger, int pickles)
+        public Burger AddPickles(Burger burger)
         {
-            burger.Pickles += pickles;
+            burger.Pickles++;
             return burger;
         }
 
-        public Burger AddPatty(Burger burger, int patty)
+        public Burger AddPatty(Burger burger)
         {
-            burger.Patty += patty;
+            burger.Patty++;
             return burger;
         }
 
-        public Burger AddCheese(Burger burger, int cheese)
+        public Burger AddCheese(Burger burger)
         {
-            burger.Cheese += cheese;
+            burger.Cheese++;
             return burger;
         }
 
-        public Burger AddOnion(Burger burger, int onion)
+        public Burger AddOnion(Burger burger)
         {
-            burger.Onion += onion;
+            burger.Onion++;
             return burger;
         }
 
-        public Burger AddLettuce(Burger burger, int lettuce)
+        public Burger AddLettuce(Burger burger)
         {
-            burger.Lettuce += lettuce;
+            burger.Lettuce++;
             return burger;
         }
     }
