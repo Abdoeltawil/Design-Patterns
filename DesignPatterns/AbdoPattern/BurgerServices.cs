@@ -2,45 +2,45 @@
 {
     public class BurgerServices : IBurgerService
     {
-        public Burger AddBuns(Burger burger)
+        public Burger AddBuns(Burger burger,int buns)
         {
-            burger.Buns++;
+            burger.Buns+=  buns;
             return burger;
         }
 
-        public Burger AddTomatoes(Burger burger)
+        public Burger AddTomatoes(Burger burger,int tomato)
         {
-            burger.Tomatoes++;
+            burger.Tomatoes+= tomato;
             return burger;
         }
 
-        public Burger AddPickles(Burger burger)
+        public Burger AddPickles(Burger burger, int pickle)
         {
-            burger.Pickles++;
+            burger.Pickles+= pickle;
             return burger;
         }
 
-        public Burger AddPatty(Burger burger)
+        public Burger AddPatty(Burger burger, int patty)
         {
-            burger.Patty++;
+            burger.Patty+=patty;
             return burger;
         }
 
-        public Burger AddCheese(Burger burger)
+        public Burger AddCheese(Burger burger, int cheese)
         {
-            burger.Cheese++;
+            burger.Cheese+= cheese;
             return burger;
         }
 
-        public Burger AddOnion(Burger burger)
+        public Burger AddOnion(Burger burger, int onion)
         {
-            burger.Onion++;
+            burger.Onion+= onion;
             return burger;
         }
 
-        public Burger AddLettuce(Burger burger)
+        public Burger AddLettuce(Burger burger, int lettuce)
         {
-            burger.Lettuce++;
+            burger.Lettuce+= lettuce;
             return burger;
         }
     }

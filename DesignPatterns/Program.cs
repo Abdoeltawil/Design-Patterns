@@ -28,14 +28,21 @@ namespace DesignPatterns
             #region AbdoPattern
             BurgerPipline burgerPipline = new BurgerPipline();
             IBurgerService burgerService = new BurgerServices();
-            burgerPipline.AddStep(burgerService.AddBuns)
-                         .AddStep(burgerService.AddCheese)
-                         .AddStep(burgerService.AddPatty)
-                         .AddStep(burgerService.AddPickles)
-                         .AddStep(burgerService.AddCheese);
+            burgerPipline.AddStep((burgerService.AddBuns, 2))
+                         .AddStep((burgerService.AddCheese, 4))
+                         .AddStep((burgerService.AddPatty, 3))
+                         .AddStep((burgerService.AddPickles, 3))
+                         .AddStep((burgerService.AddTomatoes, 2))
+                         ;
             Burger burger = burgerPipline.Execute(new Burger());
             burger.ShowBurger();
             #endregion
+
+            #region PipStrategy 
+
+            #endregion
+
+
         }
     }
 }

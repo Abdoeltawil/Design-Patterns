@@ -2,8 +2,8 @@
 {
     public class BurgerPipline
     {
-        private List<Func<Burger, Burger>> _steps = new List<Func<Burger, Burger>>();
-        public BurgerPipline AddStep(Func<Burger, Burger> step)
+        private List<(Func<Burger,int, Burger>,int)> _steps = new List<(Func<Burger, int, Burger>, int)>();
+        public BurgerPipline AddStep((Func<Burger, int, Burger>, int) step)
         {
             _steps.Add(step);
             return this;
@@ -12,7 +12,7 @@
         {
             foreach (var step in _steps)
             {
-                burger = step(burger);
+                burger = step.Item1(burger,step.Item2);
             }
             return burger;
         }
